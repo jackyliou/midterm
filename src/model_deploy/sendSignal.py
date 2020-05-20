@@ -42,28 +42,13 @@ song =np.array(
 )
 
 
-song2 =np.array(
-[
-  261, 261, 294, 261, 349, 330,
 
-  261, 261, 294, 261, 392, 349,
-
-  261, 261, 523, 440, 349, 330,
-
-  349, 349, 330, 261, 294, 261
-
-]
-
-)
 
 song = song /499
-song2 = song2 /499
 
 # output formatter
 print(song)
-print(song2)
 
-a = 1
 
 formatter = lambda x: "%.3f" % x
 
@@ -82,10 +67,10 @@ s.write(bytes(formatter(song[0]), 'UTF-8'))
 
 
 while(1):
-    b = s.readline()
-    print(b)
-    print(b[0])
-    if((b[0] == 48) or (b[0] == 49)):
+    i = s.readline()
+    print(i)
+    print(i[0])
+    if((i[0] == 48) or (i[0] == 49)):
       print("Sending signal ...")
 
       print("It may take about  seconds ..." )
